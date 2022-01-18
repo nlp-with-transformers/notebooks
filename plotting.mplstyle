@@ -1,0 +1,9 @@
+savefig.dpi: 300
+figure.figsize: 6, 4  # figure size in inches
+
+axes.prop_cycle: cycler('color', ['0071bc', 'f7931e', 'c1272d', '009245', 'ffde00', '9900cc'])
+
+font.size: 12.0
+font.family: Guardian Sans Cond
+pdf.fonttype: 42
+ps.fonttype: 42
