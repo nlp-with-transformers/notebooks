@@ -24,7 +24,7 @@ def install_requirements(is_qa: bool = False):
         import torch
 
         torch_version = torch.__version__.split("+")[0]
-        print("Installing torch-scatter ...")
+        print(f"Installing torch-scatter for torch v{torch_version} ...")
         process_scatter = subprocess.run(
             [
                 "python",
