@@ -3,6 +3,7 @@ import sys
 
 is_colab = "google.colab" in sys.modules
 is_kaggle = "kaggle_secrets" in sys.modules
+torch2cuda = {"1.10.0": "cu113", "1.9.0": "cu111", "1.9.1": "cu111"}
 
 
 def install_requirements(is_qa: bool = False):
@@ -32,17 +33,21 @@ def install_requirements(is_qa: bool = False):
                 "install",
                 "torch-scatter",
                 "-f",
-                f"https://data.pyg.org/whl/torch-{torch_version}+cu113.html",
+                f"https://data.pyg.org/whl/torch-{torch_version}+{torch2cuda[torch_version]}.html",
             ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
         if process_scatter.returncode == -1:
             raise Exception("Failed to install torch-scatter")
+        else:
+            print("torch-scatter installed!")
         print("Installing Git LFS and soundfile ...")
         process_lfs = subprocess.run(
             ["apt", "install", "git-lfs", "libsndfile1"], stdout=subprocess.PIPE, stderr=subprocess.PIPE
         )
         if process_lfs.returncode == -1:
-            raise Exception("Failed to install Git LFS")
+            raise Exception("Failed to install Git LFS and soundfile")
+        else:
+            print("Git LFS and soundfile installed!")
         print("Install complete!")
