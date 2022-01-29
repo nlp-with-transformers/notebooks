@@ -25,7 +25,7 @@ def install_requirements(is_qa: bool = False):
 
         torch_version = torch.__version__.split("+")[0]
         print(f"Installing torch-scatter for torch v{torch_version} ...")
-        # TODO: figure out why we cannot install on Kaggle
+        # TODO: figure out why we cannot install on Kaggle. Seems to be a CUDA version problem ...
         process_scatter = subprocess.run(
             [
                 "python",
