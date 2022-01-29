@@ -1,0 +1,22 @@
+# Base requirements
+transformers[tf,torch,sentencepiece,vision,optuna,sklearn,onnxruntime]==4.11.3
+datasets[audio]==1.16.1
+matplotlib
+ipywidgets
+# Chapter 2 - Classification
+umap-learn==0.5.1
+# Chapter 3 - Anatomy
+bertviz==1.2.0
+# Chapter 4 - NER
+seqeval==1.2.2
+# Chapter 6 - Summarization
+nltk==3.6.5
+sacrebleu==1.5.1
+rouge-score==0.0.4
+py7zr # Needed for samsum dataset
+# Chapter 9 - Few labels
+nlpaug==1.1.7
+scikit-multilearn==0.2.0
+# Chapter 10 - Pretraining
+psutil
+accelerate==0.5.1
