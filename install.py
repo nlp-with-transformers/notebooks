@@ -22,6 +22,7 @@ def install_requirements(is_qa: bool = False):
     if is_colab or is_kaggle:
         import torch
 
+        torch_version = torch.__version__.split("+")[0]
         print("Installing torch-scatter ...")
         process_scatter = subprocess.run(
             [
@@ -31,7 +32,7 @@ def install_requirements(is_qa: bool = False):
                 "install",
                 "torch-scatter",
                 "-f",
-                f"https://data.pyg.org/whl/torch-{torch.__version__}+cu113.html",
+                f"https://data.pyg.org/whl/torch-{torch_version}+cu113.html",
             ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
