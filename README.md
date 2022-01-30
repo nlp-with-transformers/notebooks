@@ -33,7 +33,7 @@ Next, you'll need to install a few packages that depend on your operating system
 
 * [PyTorch](https://pytorch.org/get-started/locally/)
 * [TensorFlow](https://www.tensorflow.org/install/)) (optional, since only used in a few chapters)
-* [PyTorch Scatter](https://github.com/rusty1s/pytorch_scatter)
+* [PyTorch Scatter](https://github.com/rusty1s/pytorch_scatter) (only used in Chapter 11)
 * [librosa](https://librosa.org/) (only used in Chapter 11)
 * [libsndfile](http://www.mega-nerd.com/libsndfile/) (only used in Chapter 11)
 
@@ -45,6 +45,4 @@ from install import *
 install_requirements()
 # Use the following to run Chapter 7
 # install_requirements(is_chapter7)
-# Use the following to run Chapter 11
-# install_requirements(is_chapter11)
 ```
