@@ -18,7 +18,7 @@ These platforms tend to provide more performant GPUs like P100s, all for free!
 
 ### Running on Google Colab
 
-To run these notebooks on Colab, just click on the <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> button at the top of each notebook.
+To run these notebooks on Colab, just click on the <!--<badge>--><a href="https://colab.research.google.com/" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a><!--</badge>--> button at the top of each notebook.
 
 ### Running on your machine
 
@@ -41,7 +41,10 @@ Once you have install the above requirements, create a virtual environment and i
 
 ```
 conda create -n book python=3.8 -y && conda activate book
-python -m pip install -r requirements.txt
+from install import *
+install_requirements()
 # Use the following to run Chapter 7
-# pip install -r requirements-haystack.txt -f https://download.pytorch.org/whl/torch_stable.html
+# install_requirements(is_chapter7)
+# Use the following to run Chapter 11
+# install_requirements(is_chapter11)
 ```
