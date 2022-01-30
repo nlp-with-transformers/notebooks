@@ -34,17 +34,13 @@ def install_requirements(is_chapter7: bool = False, is_chapter11: bool = False):
 
         torch_version = torch.__version__.split("+")[0]
         print(f"Installing torch-scatter for torch v{torch_version} ...")
-        # TODO: figure out why we cannot install on Kaggle. Seems to be a CUDA version problem ...
+        if is_colab:
+            torch_scatter_cmd = f"python -m pip install torch-scatter -f https://data.pyg.org/whl/torch-{torch_version}+{scatter_matrix[torch_version]}.html".split()
+        else:
+            # Kaggle uses CUDA 11.0 by default, so we need to build from source
+            torch_scatter_cmd = "python -m pip install torch-scatter".split()
         process_scatter = subprocess.run(
-            [
-                "python",
-                "-m",
-                "pip",
-                "install",
-                "torch-scatter",
-                "-f",
-                f"https://data.pyg.org/whl/torch-{torch_version}+{scatter_matrix[torch_version]}.html",
-            ],
+            torch_scatter_cmd,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
