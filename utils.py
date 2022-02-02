@@ -8,7 +8,7 @@ import matplotlib.font_manager as font_manager
 import matplotlib.pyplot as plt
 import torch
 import transformers
-from IPython.display import HTML, display, set_matplotlib_formats
+from IPython.display import set_matplotlib_formats
 
 # TODO: Consider adding SageMaker StudioLab
 is_colab = "google.colab" in sys.modules
@@ -52,11 +52,6 @@ def setup_chapter():
         huggingface_hub.logging.set_verbosity_error()
     # Use O'Reilly style for plots
     set_plot_style()
-
-
-def display_df(df, max_cols=15, header=True, index=True):
-    # 15 cols seems to be limit for O'reilly
-    return display(HTML(df.to_html(header=header, index=index, max_cols=max_cols)))
 
 
 def wrap_print_text(print):
