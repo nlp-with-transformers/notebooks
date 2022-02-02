@@ -8,7 +8,7 @@ is_kaggle = "kaggle_secrets" in sys.modules
 torch_to_cuda = {"1.10.0": "cu113", "1.9.0": "cu111", "1.9.1": "cu111"}
 
 
-def install_requirements(is_chapter7: bool = False, is_chapter11: bool = False):
+def install_requirements(is_chapter7: bool = False, is_chapter10: bool = False, is_chapter11: bool = False):
     """Installs the required packages for the project."""
 
     print("⏳ Installing base requirements ...")
@@ -29,6 +29,13 @@ def install_requirements(is_chapter7: bool = False, is_chapter11: bool = False):
         raise Exception("😭 Failed to install Git LFS and soundfile")
     else:
         print("✅ Git LFS installed!")
+    if is_chapter10:
+        wandb_cmd = "python -m pip install wandb".split()
+        process_scatter = subprocess.run(
+            wandb_cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
     if is_chapter11:
         import torch
 
