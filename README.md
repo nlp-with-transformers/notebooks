@@ -69,7 +69,7 @@ If you'd like to cite this book, you can use the following BibTeX entry:
 @book{tunstall2022natural,
   title={Natural Language Processing with Transformers: Building Language Applications with Hugging Face},
   author={Tunstall, Lewis and von Werra, Leandro and Wolf, Thomas},
-  isbn={9781492045526},
+  isbn={1098103246},
   url={https://books.google.ch/books?id=7hhyzgEACAAJ},
   year={2022},
   publisher={O'Reilly Media, Incorporated}
