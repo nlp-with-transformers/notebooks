@@ -10,7 +10,7 @@ CHAPTER_TO_NB = {
     "Text Generation": "05_text-generation",
     "Summarization": "06_summarization",
     "Question Answering": "07_question-answering",
-    "Making Transformers Efficient in Productnbion": "08_model-compression",
+    "Making Transformers Efficient in Production": "08_model-compression",
     "Dealing with Few to No Labels": "09_few-to-no-labels",
     "Training Transformers from Scratch": "10_transformers-from-scratch",
     "Future Directions": "11_future-directions",
