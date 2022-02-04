@@ -32,7 +32,7 @@ To run these notebooks on a cloud platform, just click on one of the badges in t
 
 <!--End of table-->
 
-Nowadays, the GPUs on Colab tend to be K80s (which have limited memory), so we recommend using [Kaggle](https://www.kaggle.com/docs/notebooks), [Gradient](https://gradient.run/notebooks), or [SageMaker Studio Lab]((https://studiolab.sagemaker.aws/)). These platforms tend to provide more performant GPUs like P100s, all for free!
+Nowadays, the GPUs on Colab tend to be K80s (which have limited memory), so we recommend using [Kaggle](https://www.kaggle.com/docs/notebooks), [Gradient](https://gradient.run/notebooks), or [SageMaker Studio Lab](https://studiolab.sagemaker.aws/). These platforms tend to provide more performant GPUs like P100s, all for free!
 
 ### Running on your machine
 
