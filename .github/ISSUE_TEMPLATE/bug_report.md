@@ -1,38 +1,43 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Submit a report to help us improve the book
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Information
 
-**To Reproduce**
+The problem arises in chapter:
+
+* [ ] Introduction
+* [ ] Text Classification
+* [ ] Transformer Anatomy
+* [ ] Multilingual Named Entity Recognition
+* [ ] Text Generation
+* [ ] Summarization
+* [ ] Question Answering
+* [ ] Making Transformers Efficient in Production
+* [ ] Dealing with Few to No Labels
+* [ ] Training Transformers from Scratch
+* [ ] Future Directions
+
+
+## Describe the bug
+<!-- A clear and concise description of what the bug is. -->
+
+## To Reproduce
 Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+1.
+2.
+3.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+<!-- If you have code snippets, error messages, stack traces please provide them here as well.
+     Important! Use code tags to correctly format your code. See https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting
+     Do not use screenshots, as they are hard to read and (more importantly) don't allow others to copy-and-paste your code.-->
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Expected behavior
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+<!-- A clear and concise description of what you would expect to happen. -->
