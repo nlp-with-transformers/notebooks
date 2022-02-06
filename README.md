@@ -55,8 +55,9 @@ Once you have install the above requirements, create a virtual environment and i
 
 ```
 conda create -n book python=3.8 -y && conda activate book
-from install import *
-install_requirements()
+python
+>>from install import *
+>>install_requirements()
 # Use the following to run Chapter 7
 # install_requirements(is_chapter7)
 ```
