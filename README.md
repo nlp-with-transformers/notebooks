@@ -34,32 +34,34 @@ To run these notebooks on a cloud platform, just click on one of the badges in t
 
 Nowadays, the GPUs on Colab tend to be K80s (which have limited memory), so we recommend using [Kaggle](https://www.kaggle.com/docs/notebooks), [Gradient](https://gradient.run/notebooks), or [SageMaker Studio Lab](https://studiolab.sagemaker.aws/). These platforms tend to provide more performant GPUs like P100s, all for free!
 
+> Note: some cloud platforms like Kaggle require you to restart the notebook after installing new packages.
+
 ### Running on your machine
 
-To run the notebooks on your own machine, first clone the repository:
+To run the notebooks on your own machine, first clone the repository and navigate to it:
 
+```bash
+$ git clone https://github.com/nlp-with-transformers/notebooks.git
+$ cd notebooks
 ```
-git clone https://github.com/nlp-with-transformers/notebooks
-cd notebooks-test
+
+Next, run the following command to create a `conda` virtual environment that contains all the libraries needed to run the notebooks:
+
+```bash
+$ conda env create -f environment.yml
 ```
 
-Next, you'll need to install a few packages that depend on your operating system and hardware:
+Chapter 7 (Question Answering) has a special set of dependencies, so to run that chapter you'll need a separate environment:
 
-* [PyTorch](https://pytorch.org/get-started/locally/)
-* [TensorFlow](https://www.tensorflow.org/install/) (optional, since only used in a few chapters)
-* [PyTorch Scatter](https://github.com/rusty1s/pytorch_scatter) (only used in Chapter 11)
-* [librosa](https://librosa.org/) (only used in Chapter 11)
-* [libsndfile](http://www.mega-nerd.com/libsndfile/) (only used in Chapter 11)
-
-Once you have install the above requirements, create a virtual environment and install the remaining Python dependencies:
-
+```bash
+$ conda env create -f environment-chapter7.yml
 ```
-conda create -n book python=3.8 -y && conda activate book
-python
->>from install import *
->>install_requirements()
-# Use the following to run Chapter 7
-# install_requirements(is_chapter7)
+
+Once you've installed the dependencies, you can activate the `conda` environment and spin up the notebooks as follows:
+
+```bash
+$ conda activate book # or conda activate book-chapter7
+$ jupyter notebook
 ```
 
 ## Citations
