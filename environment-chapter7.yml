@@ -1,0 +1,15 @@
+name: book-chapter7
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.9
+  - cudatoolkit=11.0
+  - pip
+  - notebook
+  - ipykernel
+  - pip:
+      - farm-haystack==0.9.0
+      - datasets==1.11.0
+      - matplotlib
+      - ipywidgets

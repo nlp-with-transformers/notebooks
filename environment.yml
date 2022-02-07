@@ -1,0 +1,17 @@
+name: book
+channels:
+  - pytorch
+  - defaults
+  - pyg
+dependencies:
+  - python=3.9
+  - cudatoolkit=11.0
+  - pytorch-scatter
+  - pip
+  - notebook
+  - ipykernel
+  - ipywidgets
+  - git-lfs
+  - libsndfile
+  - pip:
+      - -r requirements.txt
