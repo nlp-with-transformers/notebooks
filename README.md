@@ -64,6 +64,16 @@ $ conda activate book # or conda activate book-chapter7
 $ jupyter notebook
 ```
 
+## FAQ
+
+### When trying to clone the notebooks on Kaggle I get a message that I am unable to access the book's Github repository. How can I solve this issue?
+
+This issue is likely due to a missing internet connection. When running your first notebook on Kaggle you need to enable internet access in the settings menu on the right side. 
+
+### How do you select a GPU on Kaggle?
+
+You can enable GPU usage by selecting *GPU* as *Accelerator* in the settings menu on the right side.
+
 ## Citations
 
 If you'd like to cite this book, you can use the following BibTeX entry:
