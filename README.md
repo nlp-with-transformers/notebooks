@@ -51,6 +51,8 @@ Next, run the following command to create a `conda` virtual environment that con
 $ conda env create -f environment.yml
 ```
 
+> Note: You'll need a GPU that supports NVIDIA's [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) to build the environment. Currently, this means you cannot build locally on Apple silicon 😢.
+
 Chapter 7 (Question Answering) has a special set of dependencies, so to run that chapter you'll need a separate environment:
 
 ```bash
