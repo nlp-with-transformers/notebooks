@@ -17,7 +17,6 @@ def install_requirements(is_chapter7: bool = False, is_chapter10: bool = False, 
         cmd += "requirements-chapter7.txt -f https://download.pytorch.org/whl/torch_stable.html".split()
     elif is_chapter7_v2:
         cmd.append("requirements-chapter7-v2.txt")
-        cmd = ["python", "-m", "pip", "install", "--upgrade", "pip", "&&"] + cmd
     else:
         cmd.append("requirements.txt")
     process_install = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
