@@ -51,6 +51,8 @@ Next, run the following command to create a `conda` virtual environment that con
 $ conda env create -f environment.yml
 ```
 
+> Note: You'll need a GPU that supports NVIDIA's [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) to build the environment. Currently, this means you cannot build locally on Apple silicon 😢.
+
 Chapter 7 (Question Answering) has a special set of dependencies, so to run that chapter you'll need a separate environment:
 
 ```bash
@@ -63,6 +65,16 @@ Once you've installed the dependencies, you can activate the `conda` environment
 $ conda activate book # or conda activate book-chapter7
 $ jupyter notebook
 ```
+
+## FAQ
+
+### When trying to clone the notebooks on Kaggle I get a message that I am unable to access the book's Github repository. How can I solve this issue?
+
+This issue is likely due to a missing internet connection. When running your first notebook on Kaggle you need to enable internet access in the settings menu on the right side. 
+
+### How do you select a GPU on Kaggle?
+
+You can enable GPU usage by selecting *GPU* as *Accelerator* in the settings menu on the right side.
 
 ## Citations
 
