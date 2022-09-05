@@ -12,6 +12,7 @@ def install_requirements(
     is_chapter2: bool = False, 
     is_chapter6: bool = False,
     is_chapter7: bool = False,
+    is_chapter7_v2: bool = False,
     is_chapter10: bool = False,
     is_chapter11: bool = False
     ):
