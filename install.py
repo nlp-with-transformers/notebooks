@@ -20,9 +20,10 @@ def install_requirements(
 
     # Rust is required for huggingface:tokenizers
     print("⏳ Checking if Rust/Cargo is installed ...")
-    process_check_rust = subprocess.run(["cargo"])
-    if process_check_rust.returncode == -1:
-        print("⏳ Installing Cargo ...")
+    try:
+        subprocess.run(["cargo"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    except FileNotFoundError:
+        print("⏳ Missing Cargo, Installing Cargo ...")
         process_rust = subprocess.run(["apt", "install", "cargo"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         if process_rust.returncode == -1:
             raise Exception("😭 Failed to install Cargo")
