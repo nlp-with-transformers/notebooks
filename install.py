@@ -9,7 +9,7 @@ torch_to_cuda = {"1.10.0": "cu113", "1.9.0": "cu111", "1.9.1": "cu111"}
 
 
 def install_requirements(
-    is_chapter2: bool = False, 
+    is_chapter2: bool = False,
     is_chapter6: bool = False,
     is_chapter7: bool = False,
     is_chapter7_v2: bool = False,
@@ -17,6 +17,16 @@ def install_requirements(
     is_chapter11: bool = False
     ):
     """Installs the required packages for the project."""
+
+    # Rust is required for huggingface:tokenizers
+    print("⏳ Checking if Rust/Cargo is installed ...")
+    process_check_rust = subprocess.run(["cargo"])
+    if process_check_rust.returncode == -1:
+        print("⏳ Installing Cargo ...")
+        process_rust = subprocess.run(["apt", "install", "cargo"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if process_rust.returncode == -1:
+            raise Exception("😭 Failed to install Cargo")
+        print("✅ Cargo installed!")
 
     print("⏳ Installing base requirements ...")
     cmd = ["python", "-m", "pip", "install", "-r"]
