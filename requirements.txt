@@ -1,6 +1,6 @@
 # Base requirements
 transformers[tf,torch,sentencepiece,vision,optuna,sklearn,onnxruntime]==4.11.3
-tokenizers==11.6.0
+tokenizers==0.11.6
 datasets[audio]==1.16.1
 matplotlib
 ipywidgets
