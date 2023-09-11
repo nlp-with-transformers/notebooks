@@ -48,7 +48,7 @@ $ cd notebooks
 Next, run the following command to create a `conda` virtual environment that contains all the libraries needed to run the notebooks:
 
 ```bash
-$ conda env create -f environment.yml
+$ conda env create -n book -f environment.yml
 ```
 
 > Note: You'll need a GPU that supports NVIDIA's [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) to build the environment. Currently, this means you cannot build locally on Apple silicon 😢.
@@ -56,7 +56,7 @@ $ conda env create -f environment.yml
 Chapter 7 (Question Answering) has a special set of dependencies, so to run that chapter you'll need a separate environment:
 
 ```bash
-$ conda env create -f environment-chapter7.yml
+$ conda env create -n book-chapter7 -f environment-chapter7.yml
 ```
 
 Once you've installed the dependencies, you can activate the `conda` environment and spin up the notebooks as follows:
