@@ -1,4 +1,4 @@
 # Base requirements
-farm-haystack[colab]==1.4.0
+farm-haystack[colab]==1.20.1
 matplotlib
 datasets
