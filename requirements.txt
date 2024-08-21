@@ -10,7 +10,7 @@ bertviz==1.2.0
 # Chapter 4 - NER
 seqeval==1.2.2
 # Chapter 6 - Summarization
-nltk==3.6.6
+nltk==3.9
 sacrebleu==1.5.1
 rouge-score==0.0.4
 py7zr # Needed for samsum dataset
