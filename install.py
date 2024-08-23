@@ -5,7 +5,7 @@ is_colab = "google.colab" in sys.modules
 is_kaggle = "kaggle_secrets" in sys.modules
 # torch-scatter binaries depend on the torch and CUDA version, so we define the
 # mappings here for Colab & Kaggle
-torch_to_cuda = {"1.10.0": "cu113", "1.9.0": "cu111", "1.9.1": "cu111"}
+torch_to_cuda = {"1.10.0": "cu113", "1.9.0": "cu111", "1.9.1": "cu111", "2.0.1": "cu117"}
 
 
 def install_requirements(
